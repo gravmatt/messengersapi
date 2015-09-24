@@ -1,0 +1,20 @@
+{
+  "update_id": 99999999,
+  "message": {
+    "message_id": 1,
+    "from": {
+      "id": 31415926,
+      "first_name": "Bruce",
+      "last_name": "Wayne",
+      "username": "Batman"
+    },
+    "chat": {
+      "id": 31415926,
+      "first_name": "Bruce",
+      "last_name": "Wayne",
+      "username": "Batman"
+    },
+    "date": 1443035171,
+    "text": "I am Batman"
+  }
+}
