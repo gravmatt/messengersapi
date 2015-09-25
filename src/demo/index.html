@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Messenger API Demo</title>
+  <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+  <div class="container">
+  <h1>Messenger API Demo</h1>
+
+  <select>
+		<option value="facebook">Facebook</option>
+    <option value="telegram">Telegram</option>
+    <option value="whatsapp">WhatsApp</option>
+  </select>
+  <textarea></textarea>
+  <button id="btn-clear" class="btn btn-default">Clear</button>
+  <button id="btn-send" class="btn btn-default">Send</button>
+  <pre id="result"></pre>
+  </div>
+
+  <script src="/vendor/jquery/dist/jquery.js" type="text/javascript"></script>
+  <script>
+  (function(window, document, undefined) {
+
+    $('#btn-clear').on('click', function() {
+      $('textarea').val('');
+    });
+
+    $('#btn-send').on('click', function() {
+      var messenger = $('select').val();
+      var data = $('textarea').val();
+      var result = $('#result');
+
+      $.ajax('/message/' + messenger, {
+        data : data,
+        contentType : messenger === 'whatsapp' ? 'application/xml' : 'application/json',
+        type : 'POST',
+      }).done(function(e) {
+        result.html(JSON.stringify(e.message));
+      })
+      .fail(function(e) {
+        result.html(e.responseText);
+      });
+    });
+
+  })(window, document);
+  </script>
+</body>
+</html>

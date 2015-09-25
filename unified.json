@@ -1,0 +1,31 @@
+{
+  "id": "AC879447-C9ED-429E-B776-0B30E6CD949E",
+  "message_date": 1443106450598,
+
+  "messenger": "facebook",
+  "messenger_id": "1",
+
+  "from": {
+    "id": 1,
+    "name": "Bruce",
+    "lastname": "Banner",
+    "username": "Hulk"
+  },
+
+  "to": {
+    "id": 2,
+    "name": "orat.io Broadcasts",
+    "lastname": "",
+    "username": "oratio"
+  },
+
+  "type": "text",
+  "content": "whats up, guys!",
+
+  "meta": {
+    "tags": [
+      "inbox",
+      "source:web"
+    ]
+  }
+}

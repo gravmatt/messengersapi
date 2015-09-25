@@ -1,0 +1,21 @@
+{
+  "name": "messenger-api",
+  "main": "index.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/3x14159265/messengersapi",
+  "authors": [
+    "Rene Tanczos <gravmatt@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4"
+  }
+}
